@@ -14,12 +14,12 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b" style={{ borderColor: "var(--border)", backgroundColor: "var(--bg)" }}>
+    <header style={{ backgroundColor: "var(--bg)" }}>
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="font-semibold text-lg tracking-tight" style={{ color: "var(--text)" }}>
+        <Link href="/" className="font-semibold text-lg tracking-tight" style={{ fontFamily: "Lora, Georgia, serif", color: "var(--text)" }}>
           Refferable
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map(({ href, label }) => (
             <Link
               key={href}
@@ -32,8 +32,8 @@ export default function Nav() {
           ))}
           <Link
             href="/contacto"
-            className="text-sm px-4 py-2 rounded-lg font-medium transition-colors"
-            style={{ backgroundColor: "var(--accent)", color: "#fff" }}
+            className="text-sm px-5 py-2 rounded font-medium transition-opacity hover:opacity-80"
+            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
           >
             Diagnóstico gratuito
           </Link>
