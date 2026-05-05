@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const links = [
   { href: "/posicionamiento-conversacional", label: "Cómo funciona" },
@@ -12,33 +13,105 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
-    <header style={{ backgroundColor: "var(--bg)" }}>
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="font-semibold text-lg tracking-tight" style={{ fontFamily: "Lora, Georgia, serif", color: "var(--text)" }}>
-          Refferable
-        </Link>
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="text-sm transition-colors"
-              style={{ color: pathname === href ? "var(--accent)" : "var(--muted)" }}
-            >
-              {label}
-            </Link>
-          ))}
+    <>
+      <header style={{ backgroundColor: "var(--bg)", position: "relative", zIndex: 50 }}>
+        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link
-            href="/contacto"
-            className="text-sm px-5 py-2 rounded font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            href="/"
+            className="font-semibold text-lg tracking-tight"
+            style={{ fontFamily: "Lora, Georgia, serif", color: "var(--text)" }}
+            onClick={() => setOpen(false)}
           >
-            Diagnóstico gratuito
+            Refferable
           </Link>
-        </nav>
-      </div>
-    </header>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-sm transition-opacity hover:opacity-70"
+                style={{ color: pathname === href ? "var(--accent)" : "var(--muted)" }}
+              >
+                {label}
+              </Link>
+            ))}
+            <Link
+              href="/contacto"
+              className="text-sm px-5 py-2 rounded font-medium transition-opacity hover:opacity-80"
+              style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            >
+              Diagnóstico gratuito
+            </Link>
+          </nav>
+
+          {/* Hamburger button */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-[5px]"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          >
+            <span
+              className="block w-5 h-[1.5px] transition-all duration-200"
+              style={{
+                backgroundColor: "var(--text)",
+                transform: open ? "translateY(6.5px) rotate(45deg)" : "none",
+              }}
+            />
+            <span
+              className="block w-5 h-[1.5px] transition-all duration-200"
+              style={{
+                backgroundColor: "var(--text)",
+                opacity: open ? 0 : 1,
+              }}
+            />
+            <span
+              className="block w-5 h-[1.5px] transition-all duration-200"
+              style={{
+                backgroundColor: "var(--text)",
+                transform: open ? "translateY(-6.5px) rotate(-45deg)" : "none",
+              }}
+            />
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        {open && (
+          <div
+            className="md:hidden border-t"
+            style={{ backgroundColor: "var(--bg)", borderColor: "var(--border)" }}
+          >
+            <nav className="max-w-5xl mx-auto px-6 py-6 flex flex-col gap-1">
+              {links.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="py-3 text-base border-b transition-opacity hover:opacity-70"
+                  style={{
+                    color: pathname === href ? "var(--accent)" : "var(--text)",
+                    borderColor: "var(--border)",
+                  }}
+                  onClick={() => setOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+              <Link
+                href="/contacto"
+                className="mt-4 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
+                style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+                onClick={() => setOpen(false)}
+              >
+                Solicitar diagnóstico gratuito
+              </Link>
+            </nav>
+          </div>
+        )}
+      </header>
+    </>
   );
 }

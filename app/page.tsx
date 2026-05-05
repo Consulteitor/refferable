@@ -174,7 +174,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: "var(--border)" }}>
           {services.map((s) => (
             <div key={s.title} className="p-8" style={{ backgroundColor: "var(--bg)" }}>
-              <p className="font-semibold mb-3 leading-none" style={{ fontFamily: "Lora, Georgia, serif", fontSize: "2.5rem", color: "var(--border)", lineHeight: 1 }}>
+              <p className="font-semibold mb-3 leading-none" style={{ fontFamily: "Lora, Georgia, serif", fontSize: "2.5rem", color: "var(--accent)", opacity: 0.3, lineHeight: 1 }}>
                 {s.n}
               </p>
               <h3 className="font-semibold mb-3" style={{ fontSize: "1.1rem" }}>{s.title}</h3>

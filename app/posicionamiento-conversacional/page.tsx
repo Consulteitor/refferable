@@ -153,7 +153,7 @@ export default function PosicionamientoConversacional() {
         <div className="flex flex-col gap-10 max-w-3xl">
           {steps.map((s) => (
             <div key={s.n} className="flex gap-8">
-              <span className="text-2xl font-semibold shrink-0 w-10 pt-1" style={{ fontFamily: "Lora, Georgia, serif", color: "var(--border)" }}>{s.n}</span>
+              <span className="text-2xl font-semibold shrink-0 w-10 pt-1" style={{ fontFamily: "Lora, Georgia, serif", color: "var(--accent)", opacity: 0.3 }}>{s.n}</span>
               <div>
                 <h3 className="font-semibold mb-2" style={{ fontSize: "1.05rem" }}>{s.title}</h3>
                 <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.75" }}>{s.desc}</p>
