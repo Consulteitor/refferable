@@ -108,30 +108,34 @@ export default function Home() {
         <p className="text-xs font-medium tracking-widest uppercase mb-8" style={{ color: "var(--accent)" }}>
           Posicionamiento conversacional · AEO
         </p>
-        <h1 className="font-semibold tracking-tight leading-[1.08] mb-8" style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)", maxWidth: "820px" }}>
-          Posiciona tu marca donde empieza la decisión
-        </h1>
-        <p className="mb-4" style={{ color: "var(--soft)", maxWidth: "580px", fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.25rem", lineHeight: "1.6" }}>
-          Cada vez más decisiones de compra B2B empiezan en ChatGPT, Perplexity o Gemini — no en Google.
-        </p>
-        <p className="mb-10" style={{ color: "var(--muted)", maxWidth: "540px", fontSize: "1.05rem", lineHeight: "1.75" }}>
-          Refferable es la consultoría especializada en <strong>posicionamiento conversacional</strong> en España. Optimizamos tu presencia digital para que los modelos de lenguaje te citen como referencia cuando tus clientes preguntan por tu categoría.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            href="/contacto"
-            className="px-6 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
-          >
-            Solicitar diagnóstico gratuito
-          </Link>
-          <Link
-            href="/posicionamiento-conversacional"
-            className="px-6 py-3 rounded text-sm font-medium transition-opacity hover:opacity-60"
-            style={{ color: "var(--muted)" }}
-          >
-            Qué es el AEO →
-          </Link>
+        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-center">
+          <h1 className="font-semibold tracking-tight leading-[1.08]" style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}>
+            Posiciona tu marca donde empieza la decisión
+          </h1>
+          <div className="flex flex-col justify-center gap-5">
+            <p style={{ color: "var(--soft)", fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.15rem", lineHeight: "1.65" }}>
+              Cada vez más decisiones de compra B2B empiezan en ChatGPT, Perplexity o Gemini — no en Google.
+            </p>
+            <p style={{ color: "var(--muted)", fontSize: "0.975rem", lineHeight: "1.75" }}>
+              Refferable es la consultoría especializada en <strong>posicionamiento conversacional</strong> en España. Optimizamos tu presencia digital para que los modelos de lenguaje te citen como referencia cuando tus clientes preguntan por tu categoría.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Link
+                href="/contacto"
+                className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
+                style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+              >
+                Solicitar diagnóstico gratuito
+              </Link>
+              <Link
+                href="/posicionamiento-conversacional"
+                className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-60"
+                style={{ color: "var(--muted)" }}
+              >
+                Qué es el AEO →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
