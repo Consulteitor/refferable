@@ -30,7 +30,7 @@ export async function sendContactForm(
 
   try {
     await resend.emails.send({
-      from: "Refferable <onboarding@resend.dev>",
+      from: "Refferable <noreply@refferable.com>",
       to: "hola@refferable.com",
       replyTo: email,
       subject: `Diagnóstico — ${empresa}`,
