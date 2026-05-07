@@ -16,7 +16,7 @@ export default function Contacto() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           {/* Left: pitch */}
-          <div className="md:pt-4">
+          <div>
             <p className="text-xs font-medium uppercase tracking-widest mb-5" style={{ color: "var(--accent)" }}>
               Diagnóstico gratuito
             </p>
