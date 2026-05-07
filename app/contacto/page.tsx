@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contacto — Diagnóstico gratuito",
-  description: "Solicita un diagnóstico gratuito y descubre cómo aparece tu marca en los motores conversacionales.",
+  title: "Contacto — Diagnóstico conversacional gratuito",
+  description:
+    "Solicita un diagnóstico inicial de presencia conversacional y descubre cómo aparece tu marca en ChatGPT, Perplexity y Gemini.",
+  alternates: { canonical: "https://refferable.com/contacto" },
 };
 
 export default function Contacto() {
@@ -11,10 +13,10 @@ export default function Contacto() {
       <section className="max-w-5xl mx-auto px-6 pt-24 pb-20">
         <p className="text-xs font-medium uppercase tracking-widest mb-6" style={{ color: "var(--accent)" }}>Contacto</p>
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-8" style={{ maxWidth: "680px" }}>
-          Solicita un diagnóstico gratuito
+          Descubre cómo te ve la IA
         </h1>
         <p className="text-xl leading-relaxed" style={{ color: "var(--muted)", maxWidth: "520px", fontFamily: "Inter, sans-serif" }}>
-          Cuéntanos qué hace tu empresa. Revisamos cómo aparece tu marca en los principales motores conversacionales y te enviamos un informe inicial sin coste.
+          Cuéntanos qué hace tu empresa y contra quién compites. Revisaremos cómo aparece tu marca en los principales motores conversacionales y te enviaremos un diagnóstico inicial.
         </p>
       </section>
 
@@ -27,8 +29,9 @@ export default function Contacto() {
             <ul className="flex flex-col gap-6">
               {[
                 "Análisis de cómo aparece tu marca en ChatGPT, Perplexity y Gemini",
-                "Identificación de señales que faltan o están mal configuradas",
-                "Comparativa con 2–3 competidores directos",
+                "Revisión de consultas clave de categoría, competidores y casos de uso",
+                "Identificación de señales débiles, ausentes o contradictorias",
+                "Comparativa inicial con 2–3 competidores directos",
                 "Recomendaciones concretas de próximos pasos",
               ].map((item) => (
                 <li key={item} className="flex gap-4 text-sm leading-relaxed" style={{ color: "var(--muted)", fontFamily: "Inter, sans-serif" }}>
@@ -42,7 +45,7 @@ export default function Contacto() {
           <div className="p-10 rounded" style={{ backgroundColor: "var(--surface)" }}>
             <p className="font-semibold mb-2" style={{ fontFamily: "Lora, Georgia, serif" }}>Escríbenos directamente</p>
             <p className="text-sm mb-8 leading-relaxed" style={{ color: "var(--muted)", fontFamily: "Inter, sans-serif" }}>
-              Cuéntanos tu empresa, categoría y cualquier pregunta que tengas. Respondemos en menos de 48h.
+              Cuéntanos tu empresa, categoría, principales competidores y cualquier pregunta que tengas. Respondemos en menos de 48h.
             </p>
             <a
               href="mailto:hola@refferable.com?subject=Diagnóstico gratuito"

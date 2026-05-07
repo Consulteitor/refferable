@@ -6,11 +6,11 @@ import StickyCTA from "@/components/StickyCTA";
 
 export const metadata: Metadata = {
   title: {
-    default: "Refferable — Consultoría de Posicionamiento Conversacional y AEO",
+    default: "Refferable — Haz que la IA recomiende tu marca",
     template: "%s | Refferable",
   },
   description:
-    "Refferable es la consultoría especializada en posicionamiento conversacional en España. Optimizamos marcas para aparecer en respuestas de ChatGPT, Perplexity y Gemini.",
+    "Refferable ayuda a marcas B2B a aparecer mejor posicionadas en respuestas de ChatGPT, Perplexity y Gemini cuando sus clientes investigan, comparan y deciden.",
   metadataBase: new URL("https://refferable.com"),
   keywords: [
     "posicionamiento conversacional",
@@ -30,15 +30,15 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: "https://refferable.com",
     siteName: "Refferable",
-    title: "Refferable — Consultoría de Posicionamiento Conversacional y AEO",
+    title: "Refferable — Haz que la IA recomiende tu marca",
     description:
-      "Optimizamos marcas para aparecer en las respuestas de ChatGPT, Perplexity y Gemini cuando sus clientes preguntan por su categoría.",
+      "Refferable ayuda a marcas B2B a aparecer en respuestas de ChatGPT, Perplexity y Gemini cuando sus clientes investigan, comparan y deciden.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Refferable — Posicionamiento Conversacional y AEO",
+    title: "Refferable — Haz que la IA recomiende tu marca",
     description:
-      "Consultoría especializada en AEO (Answer Engine Optimization). Aparece en ChatGPT, Perplexity y Gemini.",
+      "Consultoría especializada en AEO (Answer Engine Optimization). Ayudamos a marcas B2B a aparecer en ChatGPT, Perplexity y Gemini.",
   },
   alternates: {
     canonical: "https://refferable.com",

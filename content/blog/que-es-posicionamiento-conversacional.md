@@ -9,7 +9,7 @@ category: Posicionamiento conversacional
 3. **Motores objetivo** — ChatGPT, Perplexity, Gemini, Claude y cualquier sistema que sintetice respuestas en lenguaje natural.
 4. **Señales clave** — Coherencia semántica, contexto distribuido en múltiples fuentes y autoridad citeable.
 5. **Empresas que más lo necesitan** — B2B, SaaS, consultoras, ecommerce especializado y formación donde el cliente investiga antes de decidir.
-6. **Plazo de resultados** — Entre 4 y 12 semanas desde la implementación para detectar cambios en presencia conversacional.
+6. **Riesgo principal** — Que tus competidores aparezcan en respuestas donde tu marca debería estar presente.
 7. **Compatibilidad** — El AEO es compatible y complementario al SEO tradicional; las mismas prácticas refuerzan ambos canales.
 
 El posicionamiento conversacional es la práctica de optimizar la presencia digital de una marca para que sea entendida y citada por asistentes de inteligencia artificial cuando generan respuestas a los usuarios.

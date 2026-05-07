@@ -2,44 +2,48 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AEO sin tecnicismos — Preguntas reales sobre posicionamiento conversacional",
+  title: "AEO sin tecnicismos — Preguntas reales sobre posicionamiento en IA",
   description:
-    "Respuestas directas a las preguntas más frecuentes sobre AEO, posicionamiento en ChatGPT y optimización para motores conversacionales. Sin jerga, sin promesas vacías.",
+    "Respuestas directas sobre AEO, posicionamiento conversacional, ChatGPT, Perplexity, Gemini y cómo las marcas pueden aparecer en respuestas de IA.",
   alternates: { canonical: "https://refferable.com/digamoslo-claro" },
 };
 
 const faqs = [
   {
     q: "¿El posicionamiento conversacional es lo mismo que el SEO?",
-    a: "No. El SEO optimiza para Google: trabaja keywords, backlinks y factores técnicos para rankear entre múltiples resultados. El AEO (Answer Engine Optimization) optimiza para motores conversacionales como ChatGPT o Perplexity, que no generan rankings — generan una respuesta única. Las señales que determinan si apareces son distintas: coherencia semántica, autoridad distribuida y contexto citeable.",
+    a: "No. El SEO trabaja para que una web aparezca en resultados de búsqueda. El AEO trabaja para que una marca aparezca dentro de respuestas generadas por IA. Son canales relacionados, pero no iguales.",
+  },
+  {
+    q: "¿Por qué debería importarle esto a un CEO?",
+    a: "Porque tus clientes pueden estar formando opinión sobre tu categoría antes de entrar en tu web, antes de hablar con ventas y antes de ver tus campañas. Si la IA recomienda a otros y no a ti, pierdes consideración sin verlo en Analytics.",
   },
   {
     q: "¿Cómo decide ChatGPT o Perplexity qué marcas mencionar?",
-    a: "Los modelos de lenguaje sintetizan información de múltiples fuentes públicas. No tienen un sistema de anuncios ni acuerdos comerciales con marcas. Si te mencionan es porque el modelo interpreta que eres una referencia relevante y fiable en tu categoría — basándose en coherencia semántica, contexto distribuido y señales de autoridad que ha procesado durante su entrenamiento o en búsquedas en tiempo real.",
+    a: "A partir de señales públicas y contextuales: contenido propio, menciones externas, claridad del posicionamiento, autoridad percibida y coherencia entre fuentes. Si tu marca es difícil de entender o verificar, tiene menos probabilidades de aparecer.",
   },
   {
     q: "¿Refferable paga a ChatGPT o Perplexity para que aparezcan sus clientes?",
-    a: "No. No existe ese mecanismo — ninguna agencia puede comprar visibilidad en las respuestas generadas por modelos de lenguaje. Lo que hacemos es optimizar las señales orgánicas que los modelos usan para decidir qué marcas son referencias fiables.",
+    a: "No. No existe ese mecanismo — ninguna agencia puede comprar visibilidad en las respuestas generadas por modelos de lenguaje. Trabajamos las señales orgánicas que los modelos usan para decidir qué marcas son referencias fiables.",
   },
   {
-    q: "¿Trabajar el AEO puede perjudicar mi SEO en Google?",
-    a: "No. Las prácticas de AEO — contenido claro, bien estructurado, coherente y con autoridad — son exactamente lo que Google también valora. En la mayoría de casos, trabajar el posicionamiento conversacional mejora simultáneamente el SEO tradicional.",
+    q: "¿Se puede garantizar que mi marca aparezca?",
+    a: "No. Y quien lo garantice no está siendo honesto. Lo que sí se puede hacer es diagnosticar la situación actual, corregir señales débiles y construir una presencia digital más fácil de citar.",
   },
   {
-    q: "¿Se puede garantizar que mi marca aparezca en ChatGPT?",
-    a: "No, y cualquier agencia que lo garantice miente. Los modelos de lenguaje toman sus propias decisiones de síntesis. Lo que sí podemos hacer es optimizar sistemáticamente los factores que aumentan la probabilidad de ser citado — y medirlo con datos reales.",
+    q: "¿Trabajar el AEO puede perjudicar mi SEO?",
+    a: "No. El AEO bien hecho suele reforzar el SEO porque mejora claridad, estructura, contenido y autoridad. La diferencia es que optimiza también para motores que responden, no solo para buscadores que enlazan.",
   },
   {
-    q: "¿Cuánto tiempo tardan en verse resultados de AEO?",
-    a: "Depende de la madurez digital de la marca, la competencia en su categoría y el punto de partida. En términos generales, los primeros cambios detectables en presencia conversacional ocurren entre 4 y 12 semanas después de la implementación. No es inmediato — es un canal que se construye.",
+    q: "¿Cuánto tarda en funcionar?",
+    a: "Depende de la situación de partida. Algunas mejoras pueden detectarse en semanas. Otras requieren más tiempo porque dependen de señales externas, autoridad y consistencia. No es una campaña puntual. Es una capa nueva de visibilidad.",
   },
   {
-    q: "¿Para qué tipo de empresas tiene más sentido el posicionamiento conversacional?",
-    a: "Para empresas donde el cliente investiga antes de decidir: servicios B2B, SaaS, consultoras, ecommerce especializado, formación, salud, finanzas. Si el ciclo de decisión de tu cliente incluye una fase de búsqueda e investigación, esa fase ocurre cada vez más en entornos conversacionales.",
+    q: "¿Para qué empresas tiene sentido?",
+    a: "Para empresas con procesos de compra donde el cliente investiga antes de decidir: B2B, SaaS, consultoría, tecnología, formación, ecommerce especializado, salud, finanzas, legal o cualquier categoría donde la confianza importa.",
   },
   {
-    q: "¿Qué diferencia a Refferable de una agencia SEO que ofrece 'optimización para IA'?",
-    a: "La especialización. El AEO y el GEO (Generative Engine Optimization) tienen lógicas distintas al SEO tradicional: distintas señales, distintas métricas, distintas estrategias de contenido. Refferable se dedica exclusivamente a este canal — no es un servicio adicional añadido a un paquete SEO.",
+    q: "¿Qué diferencia a Refferable de una agencia SEO que añade \"IA\" a su oferta?",
+    a: "Que Refferable nace para trabajar específicamente esta capa. No tratamos el AEO como un extra dentro de un paquete SEO. Lo tratamos como un canal propio, con señales, métricas y lógica distinta.",
   },
 ];
 
@@ -64,10 +68,10 @@ export default function DigamosloClaro() {
       <section className="max-w-5xl mx-auto px-6 pt-20 pb-16">
         <p className="text-xs font-medium tracking-widest uppercase mb-6" style={{ color: "var(--accent)" }}>Sin rodeos</p>
         <h1 className="font-semibold tracking-tight leading-[1.08] mb-8" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", maxWidth: "820px" }}>
-          AEO y posicionamiento conversacional sin tecnicismos
+          AEO sin tecnicismos
         </h1>
         <p className="mb-4" style={{ color: "var(--muted)", maxWidth: "580px", fontSize: "1.1rem", lineHeight: "1.75" }}>
-          Preguntas reales sobre cómo funciona el posicionamiento en ChatGPT, Perplexity y Gemini. Sin jerga de marketing, sin promesas imposibles.
+          Preguntas reales sobre cómo funciona el posicionamiento en ChatGPT, Perplexity y Gemini. Sin jerga de marketing. Sin promesas imposibles. Sin vender humo.
         </p>
       </section>
 
@@ -77,7 +81,7 @@ export default function DigamosloClaro() {
         <div className="max-w-3xl p-10 rounded" style={{ backgroundColor: "var(--surface)" }}>
           <p className="text-xs font-medium uppercase tracking-widest mb-4" style={{ color: "var(--soft)" }}>La definición operativa</p>
           <p style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.2rem", lineHeight: "1.7", color: "var(--text)" }}>
-            "El <strong>AEO (Answer Engine Optimization)</strong> o posicionamiento conversacional es la optimización de una marca para que los modelos de lenguaje la citen como referencia en las respuestas que generan. Se distingue del SEO en que no persigue un ranking entre resultados, sino ser parte de la respuesta única que el asistente construye."
+            "El <strong>AEO — Answer Engine Optimization</strong> consiste en optimizar la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, citarla y recomendarla cuando responden preguntas sobre una categoría, problema o solución."
           </p>
         </div>
       </section>
@@ -106,17 +110,17 @@ export default function DigamosloClaro() {
             ¿Tiene sentido el AEO para tu empresa?
           </h2>
           <p className="mb-2" style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.1rem", color: "var(--text)" }}>
-            Cuéntanos qué haces y te lo decimos sin rodeos.
+            Cuéntanos qué vendes y cómo compran tus clientes. Te diremos si tiene sentido o no.
           </p>
           <p className="mb-10" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75" }}>
-            Si el AEO no encaja con tu negocio ahora mismo, te lo decimos también. Preferimos ser honestos a venderte algo que no necesitas.
+            No todas las empresas necesitan trabajar AEO ahora mismo. Si tu categoría no tiene demanda conversacional o no hay oportunidad clara, te lo diremos.
           </p>
           <Link
             href="/contacto"
             className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
             style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
           >
-            Hablar con nosotros
+            Solicitar diagnóstico
           </Link>
         </div>
       </section>

@@ -4,7 +4,9 @@ import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog — Posicionamiento en IA",
-  description: "Artículos sobre posicionamiento conversacional, cómo funciona la IA y estrategias para aparecer en ChatGPT y Perplexity.",
+  description:
+    "Ideas, análisis y guías sobre cómo las marcas compiten por aparecer en respuestas de ChatGPT, Perplexity, Gemini y otros motores conversacionales.",
+  alternates: { canonical: "https://refferable.com/blog" },
 };
 
 export default function Blog() {
@@ -16,7 +18,7 @@ export default function Blog() {
         <p className="text-xs font-medium uppercase tracking-widest mb-6" style={{ color: "var(--accent)" }}>Blog</p>
         <h1 className="text-5xl font-semibold tracking-tight leading-[1.1] mb-6">Posicionamiento en IA</h1>
         <p className="text-xl" style={{ color: "var(--muted)", fontFamily: "Inter, sans-serif" }}>
-          Artículos sobre cómo funciona la búsqueda conversacional y cómo preparar tu marca.
+          Ideas, análisis y guías sobre cómo cambia la búsqueda, la recomendación y la decisión de compra. No hablamos de IA como moda. Hablamos de cómo preparar tu marca para donde empieza la decisión.
         </p>
       </section>
 

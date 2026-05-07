@@ -4,31 +4,31 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Qué es el Posicionamiento Conversacional y el AEO",
   description:
-    "El posicionamiento conversacional (AEO — Answer Engine Optimization) es la optimización de marcas para aparecer en respuestas de ChatGPT, Perplexity y Gemini. Cómo funciona y cómo aplicarlo.",
+    "El posicionamiento conversacional o AEO ayuda a las marcas a ser entendidas, citadas y recomendadas por motores de IA como ChatGPT, Perplexity y Gemini.",
   alternates: { canonical: "https://refferable.com/posicionamiento-conversacional" },
   openGraph: {
     title: "Posicionamiento Conversacional y AEO — Cómo funciona",
     description:
-      "Guía completa sobre AEO (Answer Engine Optimization): qué es, en qué se diferencia del SEO, cómo deciden los modelos de IA qué marcas mencionar y cómo optimizar tu presencia conversacional.",
+      "Qué es el AEO (Answer Engine Optimization), en qué se diferencia del SEO, cómo deciden los modelos de IA qué marcas citar y cómo optimizar tu presencia conversacional.",
   },
 };
 
 const pillars = [
   {
     title: "Contexto semántico claro",
-    desc: "Los modelos de lenguaje no procesan keywords — procesan significado. Tu marca necesita estar asociada de forma inequívoca a los problemas que resuelve, los sectores en los que opera y las preguntas que responde.",
+    desc: "Los modelos de lenguaje no entienden tu marca por una keyword aislada. La entienden por contexto. Necesitan saber qué haces, para quién lo haces, qué problemas resuelves y en qué categoría debes ser considerado.",
   },
   {
     title: "Coherencia entre fuentes",
-    desc: "Cuando una marca se describe de forma contradictoria en distintos canales, los modelos tienen dificultades para sintetizarla con confianza. La coherencia semántica distribuida es la base del AEO.",
+    desc: "Si tu web dice una cosa, tus perfiles dicen otra y las menciones externas no refuerzan ninguna, la IA tendrá dificultades para sintetizar tu marca con confianza. La coherencia distribuida es una señal clave.",
   },
   {
     title: "Contenido citeable, no solo posicionable",
-    desc: "El AEO no optimiza para rankear: optimiza para ser citado. El contenido debe tener la estructura, la especificidad y la autoridad necesarias para que un modelo de lenguaje lo use como fuente en una respuesta.",
+    desc: "El AEO no busca solo atraer tráfico. Busca construir contenido que pueda ser usado como fuente: claro, específico, atribuible y útil para responder preguntas reales.",
   },
   {
     title: "Autoridad distribuida en el ecosistema",
-    desc: "ChatGPT o Perplexity no evalúan una sola URL. Sintetizan señales de múltiples fuentes: menciones en medios, definiciones en directorios, citas en contenido de terceros. La estrategia AEO trabaja ese ecosistema.",
+    desc: "Los motores conversacionales no evalúan una sola URL. Sintetizan señales de múltiples fuentes. Tu autoridad depende también de cómo apareces fuera de tu propia web.",
   },
 ];
 
@@ -36,22 +36,22 @@ const steps = [
   {
     n: "01",
     title: "Diagnóstico de presencia conversacional",
-    desc: "Analizamos cómo te mencionan (o ignoran) ChatGPT, Perplexity y Gemini cuando alguien pregunta por tu categoría, tus competidores o los problemas que resuelves. Identificamos las brechas y su causa.",
+    desc: "Analizamos cómo te mencionan —o ignoran— ChatGPT, Perplexity y Gemini cuando alguien pregunta por tu categoría, tus competidores o los problemas que resuelves.",
   },
   {
     n: "02",
     title: "Arquitectura semántica",
-    desc: "Rediseñamos la estructura de contenido de tu marca — páginas, FAQs, definiciones, descripciones de servicio — para que los modelos de lenguaje puedan interpretarte con precisión y sin ambigüedad.",
+    desc: "Reordenamos y clarificamos el contenido clave de tu marca para que los modelos puedan entenderte sin ambigüedad: páginas, FAQs, definiciones, servicios, casos de uso y mensajes principales.",
   },
   {
     n: "03",
     title: "Construcción de señales de autoridad",
-    desc: "Trabajamos tu presencia contextual en fuentes relevantes: menciones, citas, definiciones externas. Las mismas señales que los modelos de IA usan para decidir si una marca es una referencia fiable.",
+    desc: "Trabajamos tu presencia contextual en fuentes relevantes. No se trata solo de publicar más. Se trata de que tu marca aparezca en los lugares y contextos que refuerzan su credibilidad.",
   },
   {
     n: "04",
     title: "Medición y ajuste continuo",
-    desc: "Monitorizamos tu evolución en entornos conversacionales: en qué consultas apareces, con qué contexto, y frente a qué competidores. El AEO no es una acción puntual — es un canal que se gestiona.",
+    desc: "Monitorizamos tu evolución: en qué consultas apareces, cómo te describe la IA, frente a qué competidores y qué gaps siguen abiertos. El canal conversacional se gestiona, no se improvisa.",
   },
 ];
 
@@ -83,13 +83,16 @@ export default function PosicionamientoConversacional() {
           Posicionamiento conversacional · AEO · GEO
         </p>
         <h1 className="font-semibold tracking-tight leading-[1.08] mb-8" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", maxWidth: "820px" }}>
-          Qué es el posicionamiento conversacional y cómo funciona el AEO
+          Qué es el posicionamiento conversacional y por qué ya afecta a tu negocio
         </h1>
         <p className="mb-5" style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1.1rem", lineHeight: "1.75" }}>
-          El <strong>AEO (Answer Engine Optimization)</strong> o posicionamiento conversacional es la disciplina que optimiza la presencia de una marca para que los modelos de lenguaje — ChatGPT, Perplexity, Gemini — la citen como referencia al generar respuestas.
+          El <strong>AEO (Answer Engine Optimization)</strong> o posicionamiento conversacional es la disciplina que optimiza la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla en sus respuestas.
+        </p>
+        <p className="mb-5" style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1rem", lineHeight: "1.75" }}>
+          A diferencia del SEO, no compite por aparecer entre diez resultados. Compite por formar parte de una respuesta única que el usuario puede tomar como referencia directa.
         </p>
         <p style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1rem", lineHeight: "1.75" }}>
-          A diferencia del SEO, no compite por un ranking entre diez resultados. Compite por ser parte de una respuesta única que el asistente genera — y que el usuario toma como definitiva.
+          Cuando un comprador pregunta a ChatGPT, Perplexity o Gemini por proveedores, alternativas o soluciones, la IA no le entrega una lista de enlaces. Le da una interpretación del mercado. La pregunta es sencilla: ¿tu marca forma parte de esa interpretación?
         </p>
       </section>
 
@@ -109,11 +112,11 @@ export default function PosicionamientoConversacional() {
 
       <div className="border-t" style={{ borderColor: "var(--border)" }} />
 
-      {/* Diferència SEO vs AEO — molt important per GEO */}
+      {/* SEO vs AEO */}
       <section className="max-w-5xl mx-auto px-6 py-14">
         <p className="text-xs font-medium tracking-widest uppercase mb-8" style={{ color: "var(--soft)" }}>SEO vs AEO — cuadro comparativo</p>
-        <div className="max-w-3xl">
-          <div className="grid grid-cols-3 gap-px mb-px" style={{ backgroundColor: "var(--border)" }}>
+        <div className="max-w-3xl overflow-x-auto">
+          <div className="grid grid-cols-3 gap-px mb-px" style={{ backgroundColor: "var(--border)", minWidth: "560px" }}>
             <div className="p-4" style={{ backgroundColor: "var(--surface)" }}>
               <p className="text-xs font-medium uppercase tracking-widest" style={{ color: "var(--soft)" }}>Aspecto</p>
             </div>
@@ -125,13 +128,15 @@ export default function PosicionamientoConversacional() {
             </div>
           </div>
           {[
-            ["Objetivo", "Rankear entre 10 resultados", "Ser citado en una respuesta única"],
-            ["Canal", "Google, Bing", "ChatGPT, Perplexity, Gemini"],
-            ["Métrica", "Posición, clics, CTR", "Menciones, contexto, frecuencia de cita"],
-            ["Señales clave", "Backlinks, keywords, técnico", "Coherencia semántica, autoridad distribuida"],
-            ["Resultado para el usuario", "Lista de enlaces para elegir", "Respuesta directa sin alternativas visibles"],
+            ["Objetivo", "Rankear entre resultados", "Ser citado en una respuesta"],
+            ["Canal", "Google, Bing", "ChatGPT, Perplexity, Gemini, Claude"],
+            ["Usuario", "Busca y elige entre enlaces", "Pregunta y recibe una síntesis"],
+            ["Métrica", "Posición, clics, CTR", "Menciones, contexto, cobertura de consultas"],
+            ["Señales clave", "Keywords, backlinks, técnica", "Claridad semántica, autoridad distribuida, contenido citeable"],
+            ["Riesgo", "Perder posiciones", "No formar parte de la respuesta"],
+            ["Resultado", "Tráfico hacia tu web", "Presencia en la decisión inicial"],
           ].map(([aspecto, seo, aeo]) => (
-            <div key={aspecto} className="grid grid-cols-3 gap-px mb-px" style={{ backgroundColor: "var(--border)" }}>
+            <div key={aspecto} className="grid grid-cols-3 gap-px mb-px" style={{ backgroundColor: "var(--border)", minWidth: "560px" }}>
               <div className="p-4" style={{ backgroundColor: "var(--bg)" }}>
                 <p className="text-sm font-medium">{aspecto}</p>
               </div>
@@ -171,17 +176,17 @@ export default function PosicionamientoConversacional() {
             ¿Cómo aparece tu marca en ChatGPT ahora mismo?
           </h2>
           <p className="mb-2" style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.1rem", color: "var(--text)" }}>
-            La mayoría de empresas no lo saben.
+            Puede que no aparezca. Puede que aparezca mal. Puede que tus competidores estén ocupando tu sitio.
           </p>
           <p className="mb-10" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75" }}>
-            Hacemos un diagnóstico gratuito de tu presencia conversacional en ChatGPT, Perplexity y Gemini. Sin compromiso — con datos reales.
+            Solicita un diagnóstico inicial de presencia conversacional y te mostraremos qué ve la IA cuando alguien pregunta por tu categoría.
           </p>
           <Link
             href="/contacto"
             className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
             style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
           >
-            Solicitar diagnóstico gratuito
+            Solicitar diagnóstico
           </Link>
         </div>
       </section>
