@@ -16,19 +16,19 @@ export const metadata: Metadata = {
 const pillars = [
   {
     title: "Contexto semántico claro",
-    desc: "Los modelos de lenguaje no entienden tu marca por una keyword aislada. La entienden por contexto. Necesitan saber qué haces, para quién lo haces, qué problemas resuelves y en qué categoría debes ser considerado.",
+    desc: "Los modelos de lenguaje no entienden tu marca por una keyword aislada. La entienden por contexto: qué haces, para quién, qué problemas resuelves, en qué categoría debes ser considerado. Sin ese contexto, la IA no sabe cómo presentarte.",
   },
   {
     title: "Coherencia entre fuentes",
-    desc: "Si tu web dice una cosa, tus perfiles dicen otra y las menciones externas no refuerzan ninguna, la IA tendrá dificultades para sintetizar tu marca con confianza. La coherencia distribuida es una señal clave.",
+    desc: "Si tu web dice una cosa, tus perfiles dicen otra y las menciones externas no refuerzan ninguna, la IA tendrá dificultades para sintetizarte con confianza. La coherencia distribuida no es opcional: es la base.",
   },
   {
     title: "Contenido citeable, no solo posicionable",
-    desc: "El AEO no busca solo atraer tráfico. Busca construir contenido que pueda ser usado como fuente: claro, específico, atribuible y útil para responder preguntas reales.",
+    desc: "El AEO no busca atraer clics. Busca construir contenido que pueda ser usado como fuente: claro, específico, atribuible, útil para responder preguntas reales. Un modelo no cita lo que no puede verificar.",
   },
   {
     title: "Autoridad distribuida en el ecosistema",
-    desc: "Los motores conversacionales no evalúan una sola URL. Sintetizan señales de múltiples fuentes. Tu autoridad depende también de cómo apareces fuera de tu propia web.",
+    desc: "Los motores conversacionales no evalúan una sola URL. Sintetizan señales de múltiples fuentes. Tu autoridad depende también de cómo apareces fuera de tu propia web: menciones, comparativas, directorios, contenido de terceros.",
   },
 ];
 
@@ -36,7 +36,7 @@ const steps = [
   {
     n: "01",
     title: "Diagnóstico de presencia conversacional",
-    desc: "Analizamos cómo te mencionan —o ignoran— ChatGPT, Perplexity y Gemini cuando alguien pregunta por tu categoría, tus competidores o los problemas que resuelves.",
+    desc: "Analizamos cómo te mencionan —o ignoran— ChatGPT, Perplexity y Gemini cuando alguien pregunta por tu categoría, tus competidores o los problemas que resuelves. Es el punto de partida: sin datos reales, no hay estrategia.",
   },
   {
     n: "02",
@@ -46,7 +46,7 @@ const steps = [
   {
     n: "03",
     title: "Construcción de señales de autoridad",
-    desc: "Trabajamos tu presencia contextual en fuentes relevantes. No se trata solo de publicar más. Se trata de que tu marca aparezca en los lugares y contextos que refuerzan su credibilidad.",
+    desc: "Trabajamos tu presencia contextual en fuentes relevantes. No se trata solo de publicar más. Se trata de que tu marca aparezca en los lugares y contextos que refuerzan tu credibilidad como referencia en tu categoría.",
   },
   {
     n: "04",
@@ -78,32 +78,62 @@ export default function PosicionamientoConversacional() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
+      {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 pt-20 pb-16">
         <p className="text-xs font-medium tracking-widest uppercase mb-6" style={{ color: "var(--accent)" }}>
           Posicionamiento conversacional · AEO · GEO
         </p>
-        <h1 className="font-semibold tracking-tight leading-[1.08] mb-8" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", maxWidth: "820px" }}>
-          Qué es el posicionamiento conversacional y por qué ya afecta a tu negocio
-        </h1>
-        <p className="mb-5" style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1.1rem", lineHeight: "1.75" }}>
-          El <strong>AEO (Answer Engine Optimization)</strong> o posicionamiento conversacional es la disciplina que optimiza la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla en sus respuestas.
-        </p>
-        <p className="mb-5" style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1rem", lineHeight: "1.75" }}>
-          A diferencia del SEO, no compite por aparecer entre diez resultados. Compite por formar parte de una respuesta única que el usuario puede tomar como referencia directa.
-        </p>
-        <p style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1rem", lineHeight: "1.75" }}>
-          Cuando un comprador pregunta a ChatGPT, Perplexity o Gemini por proveedores, alternativas o soluciones, la IA no le entrega una lista de enlaces. Le da una interpretación del mercado. La pregunta es sencilla: ¿tu marca forma parte de esa interpretación?
-        </p>
+        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">
+          <div>
+            <h1 className="font-semibold tracking-tight leading-[1.08] mb-8" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
+              Qué es el posicionamiento conversacional y por qué ya afecta a tu negocio
+            </h1>
+            <p className="mb-5" style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1.1rem", lineHeight: "1.75" }}>
+              El <strong>AEO (Answer Engine Optimization)</strong> es la disciplina que optimiza la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla en sus respuestas.
+            </p>
+            <p style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1rem", lineHeight: "1.75" }}>
+              Cuando un comprador pregunta a ChatGPT, Perplexity o Gemini por proveedores, alternativas o soluciones, la IA no le entrega una lista de enlaces. Le da una interpretación del mercado. La pregunta no es si deberías estar ahí. Es si ya estás.
+            </p>
+          </div>
+          <div className="flex flex-col gap-5 md:pt-4">
+            <p style={{ color: "var(--soft)", fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.1rem", lineHeight: "1.65" }}>
+              Tu competencia ya está apareciendo en respuestas donde tu marca no existe.
+            </p>
+            <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.75" }}>
+              Hacemos un diagnóstico inicial de tu presencia conversacional. Sin coste. Con datos reales.
+            </p>
+            <div className="flex flex-col gap-3 pt-1">
+              <Link
+                href="/contacto"
+                className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
+                style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+              >
+                Solicitar diagnóstico gratuito
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div className="border-t" style={{ borderColor: "var(--border)" }} />
 
+      {/* Los cuatro pilares */}
       <section className="max-w-5xl mx-auto px-6 py-14">
-        <p className="text-xs font-medium tracking-widest uppercase mb-10" style={{ color: "var(--soft)" }}>Los cuatro pilares del AEO</p>
+        <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start mb-10">
+          <div>
+            <p className="text-xs font-medium tracking-widest uppercase mb-4" style={{ color: "var(--soft)" }}>Los cuatro pilares del AEO</p>
+            <h2 className="font-semibold leading-snug" style={{ fontSize: "1.75rem" }}>
+              En qué falla tu marca ante la IA
+            </h2>
+          </div>
+          <p style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75", paddingTop: "0.25rem" }}>
+            Si alguno de estos pilares es débil, la IA tiene dificultades para citarte con confianza. La mayoría de marcas presentan señales débiles en al menos dos de ellos — sin saberlo.
+          </p>
+        </div>
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: "var(--border)" }}>
           {pillars.map((p) => (
             <div key={p.title} className="p-8" style={{ backgroundColor: "var(--bg)" }}>
-              <h2 className="font-semibold mb-3" style={{ fontSize: "1.1rem" }}>{p.title}</h2>
+              <h3 className="font-semibold mb-3" style={{ fontSize: "1.1rem" }}>{p.title}</h3>
               <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.75" }}>{p.desc}</p>
             </div>
           ))}
@@ -114,7 +144,10 @@ export default function PosicionamientoConversacional() {
 
       {/* SEO vs AEO */}
       <section className="max-w-5xl mx-auto px-6 py-14">
-        <p className="text-xs font-medium tracking-widest uppercase mb-8" style={{ color: "var(--soft)" }}>SEO vs AEO — cuadro comparativo</p>
+        <p className="text-xs font-medium tracking-widest uppercase mb-4" style={{ color: "var(--soft)" }}>SEO vs AEO — cuadro comparativo</p>
+        <p className="mb-8" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75", maxWidth: "600px" }}>
+          No son enemigos. Son canales distintos con lógicas distintas. El error es tratarlos como si fueran lo mismo.
+        </p>
         <div className="max-w-3xl overflow-x-auto">
           <div className="grid grid-cols-3 gap-px mb-px" style={{ backgroundColor: "var(--border)", minWidth: "560px" }}>
             <div className="p-4" style={{ backgroundColor: "var(--surface)" }}>
@@ -153,8 +186,19 @@ export default function PosicionamientoConversacional() {
 
       <div className="border-t" style={{ borderColor: "var(--border)" }} />
 
+      {/* Cómo trabajamos */}
       <section className="max-w-5xl mx-auto px-6 py-14">
-        <p className="text-xs font-medium tracking-widest uppercase mb-12" style={{ color: "var(--soft)" }}>Cómo trabajamos el posicionamiento conversacional</p>
+        <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start mb-12">
+          <div>
+            <p className="text-xs font-medium tracking-widest uppercase mb-4" style={{ color: "var(--soft)" }}>Cómo trabajamos</p>
+            <h2 className="font-semibold leading-snug" style={{ fontSize: "1.75rem" }}>
+              Lo que hacemos cuando trabajamos con tu marca
+            </h2>
+          </div>
+          <p style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75", paddingTop: "0.25rem" }}>
+            No vendemos paquetes cerrados. Empezamos por entender dónde está tu marca en el ecosistema conversacional y construimos desde ahí. Cada empresa parte de un punto distinto.
+          </p>
+        </div>
         <div className="flex flex-col gap-10 max-w-3xl">
           {steps.map((s) => (
             <div key={s.n} className="flex gap-8">
@@ -170,6 +214,7 @@ export default function PosicionamientoConversacional() {
 
       <div className="border-t" style={{ borderColor: "var(--border)" }} />
 
+      {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="max-w-2xl">
           <h2 className="font-semibold leading-snug mb-3" style={{ fontSize: "2rem" }}>
@@ -179,14 +224,14 @@ export default function PosicionamientoConversacional() {
             Puede que no aparezca. Puede que aparezca mal. Puede que tus competidores estén ocupando tu sitio.
           </p>
           <p className="mb-10" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75" }}>
-            Solicita un diagnóstico inicial de presencia conversacional y te mostraremos qué ve la IA cuando alguien pregunta por tu categoría.
+            El primer paso es saberlo. Hacemos un diagnóstico inicial sin coste: qué ve la IA cuando alguien pregunta por tu categoría, cómo te compara con la competencia y qué señales hay que corregir primero.
           </p>
           <Link
             href="/contacto"
             className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
             style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
           >
-            Solicitar diagnóstico
+            Solicitar diagnóstico gratuito
           </Link>
         </div>
       </section>
