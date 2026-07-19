@@ -13,6 +13,7 @@ export default function Footer() {
         <div className="flex gap-16">
           <div className="flex flex-col gap-3">
             <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>Servicios</p>
+            <Link href="/que-dice-chatgpt-de-tu-marca" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Checker gratuito</Link>
             <Link href="/posicionamiento-conversacional" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Cómo funciona</Link>
             <Link href="/digamoslo-claro" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Digámoslo claro</Link>
             <Link href="/blog" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Blog</Link>

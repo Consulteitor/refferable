@@ -60,6 +60,25 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   const blocks = post.content.split("\n\n").filter(Boolean);
 
+  // Inline markdown mínimo: **negrita** y [texto](url). El resto se muestra tal cual.
+  function renderInline(text: string): React.ReactNode[] {
+    const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+    return parts.map((part, i) => {
+      const bold = part.match(/^\*\*([^*]+)\*\*$/);
+      if (bold) return <strong key={i}>{bold[1]}</strong>;
+      const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (link) {
+        const href = link[2].replace(/^https:\/\/refferable\.com/, "") || "/";
+        return (
+          <Link key={i} href={href} style={{ color: "var(--accent)" }}>
+            {link[1]}
+          </Link>
+        );
+      }
+      return part;
+    });
+  }
+
   return (
     <>
       <script
@@ -99,7 +118,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             );
             return (
               <p key={i} style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.8" }}>
-                {block}
+                {renderInline(block)}
               </p>
             );
           })}

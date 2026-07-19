@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Refferable
 
-## Getting Started
+Consultoría de posicionamiento conversacional (AEO) en España — [refferable.com](https://refferable.com). Next.js 16 + TypeScript + Tailwind 4, desplegado en Vercel.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3001
+npm run build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Checker GEO (`/que-dice-chatgpt-de-tu-marca`)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Herramienta gratuita que comprueba si los motores de IA mencionan una marca cuando un comprador pregunta por su categoría. Flujo: formulario → 2 consultas en directo (resultado parcial sin email) → email → informe completo (5-8 consultas, nota 0-100, recomendaciones) enviado también por Resend, con aviso interno de lead a hola@refferable.com.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Arquitectura en `lib/geo/`:
 
-## Learn More
+- `provider.ts` — selección de motor. v1 solo Perplexity (Sonar, siempre con búsqueda activa). Para añadir ChatGPT/Gemini en v2: implementar la interfaz `AnswerEngine` de `types.ts` y agregarla aquí.
+- `perplexity.ts` / `mock.ts` — proveedores real y simulado.
+- `questions.ts` — genera las preguntas de comprador (las 2 primeras nunca nombran la marca; son el tramo gratuito).
+- `analysis.ts` — detección de menciones, posición frente a competidores, tono y nota 0-100.
+- `cache.ts` — cache de respuestas 6h + límite de 5 escaneos/IP/día (en memoria de proceso; si el checker crece, migrar a KV).
+- `scan.ts` — orquestación.
 
-To learn more about Next.js, take a look at the following resources:
+Las Server Actions están en `app/actions/checker.ts` (mismo patrón que `contact.ts`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Variables de entorno
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Uso |
+| --- | --- |
+| `RESEND_API_KEY` | Envío de emails (contacto + informes del checker). Ya configurada en Vercel. |
+| `PERPLEXITY_API_KEY` | Consultas reales del checker (modelo Sonar). Sin ella, el checker funciona en modo mock con un aviso en consola. |
+| `GEO_PROVIDER` | Poner `mock` para forzar respuestas simuladas (desarrollo/pruebas, coste cero). |
 
-## Deploy on Vercel
+### Activar la clave real de Perplexity
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Crear la clave en <https://www.perplexity.ai/settings/api>.
+2. En local: añadir `PERPLEXITY_API_KEY=pplx-...` a `.env.local` (y quitar `GEO_PROVIDER=mock` si está).
+3. En producción: `vercel env add PERPLEXITY_API_KEY` (o desde el dashboard de Vercel) y redesplegar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las respuestas mock van prefijadas con `[RESPUESTA SIMULADA — modo mock...]` para que sea imposible confundirlas con datos reales.

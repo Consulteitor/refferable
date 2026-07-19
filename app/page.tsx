@@ -190,11 +190,11 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link
-                href="/contacto"
+                href="/que-dice-chatgpt-de-tu-marca"
                 className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
                 style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
               >
-                Solicitar diagnóstico gratuito
+                Comprueba gratis qué dice la IA de ti
               </Link>
               <Link
                 href="/posicionamiento-conversacional"
@@ -264,7 +264,7 @@ export default function Home() {
           </div>
           <div>
             <p className="font-medium leading-relaxed mb-5" style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.2rem", color: "var(--text)", borderLeft: "2px solid var(--accent)", paddingLeft: "1.25rem" }}>
-              "El <strong>AEO — Answer Engine Optimization</strong> es la optimización de la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla como referencia cuando generan respuestas."
+              &quot;El <strong>AEO — Answer Engine Optimization</strong> es la optimización de la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla como referencia cuando generan respuestas.&quot;
             </p>
             <p className="mb-4" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75" }}>
               El SEO tradicional optimiza para rankings. El AEO optimiza para ser parte de la respuesta. No se trata solo de poner más contenido en tu web. Se trata de construir un contexto digital claro, coherente y verificable alrededor de tu marca.
@@ -391,15 +391,26 @@ export default function Home() {
             La mayoría de marcas no lo sabe. Y algunas preferirían no verlo.
           </p>
           <p className="mb-10" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75" }}>
-            Hacemos un diagnóstico inicial de tu presencia conversacional: cómo apareces en ChatGPT, Perplexity y Gemini, qué competidores ocupan espacio, qué señales te faltan y qué pasos concretos deberías priorizar.
+            Ahora puedes salir de dudas en dos minutos: nuestro checker lanza preguntas reales de comprador a un motor
+            de IA con búsqueda activa y te dice si apareces, en qué posición y con qué tono. Gratis y sin registro
+            para el primer resultado.
           </p>
-          <Link
-            href="/contacto"
-            className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
-          >
-            Solicitar diagnóstico gratuito
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/que-dice-chatgpt-de-tu-marca"
+              className="inline-block px-7 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
+              style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            >
+              Comprobarlo gratis ahora
+            </Link>
+            <Link
+              href="/contacto"
+              className="inline-block px-7 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-60"
+              style={{ color: "var(--muted)" }}
+            >
+              Hablar con nosotros →
+            </Link>
+          </div>
         </div>
       </section>
     </>

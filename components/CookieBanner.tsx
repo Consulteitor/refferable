@@ -1,33 +1,35 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useReducer, useSyncExternalStore } from "react";
 import Script from "next/script";
 import Link from "next/link";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const CONSENT_KEY = "refferable_cookie_consent";
 
+function subscribeToStorage(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
+
 export default function CookieBanner() {
-  const [consent, setConsent] = useState<string | null>(null);
-  const [visible, setVisible] = useState(false);
+  // localStorage como store externo: en servidor "ssr" (no se renderiza nada),
+  // en cliente el valor guardado o "undecided" (banner visible).
+  const [, rerender] = useReducer((x: number) => x + 1, 0);
+  const consent = useSyncExternalStore(
+    subscribeToStorage,
+    () => localStorage.getItem(CONSENT_KEY) ?? "undecided",
+    () => "ssr"
+  );
+  const visible = consent === "undecided";
 
-  useEffect(() => {
-    const stored = localStorage.getItem(CONSENT_KEY);
-    setConsent(stored);
-    if (!stored) setVisible(true);
-  }, []);
-
-  const accept = () => {
-    localStorage.setItem(CONSENT_KEY, "accepted");
-    setConsent("accepted");
-    setVisible(false);
+  const decide = (value: "accepted" | "rejected") => {
+    localStorage.setItem(CONSENT_KEY, value);
+    rerender();
   };
 
-  const reject = () => {
-    localStorage.setItem(CONSENT_KEY, "rejected");
-    setConsent("rejected");
-    setVisible(false);
-  };
+  const accept = () => decide("accepted");
+  const reject = () => decide("rejected");
 
   return (
     <>

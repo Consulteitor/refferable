@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function StickyCTA() {
   const pathname = usePathname();
-  if (pathname === "/contacto") return null;
+  if (pathname === "/contacto" || pathname.startsWith("/que-dice-chatgpt-de-tu-marca")) return null;
 
   return (
     <div
@@ -13,11 +13,11 @@ export default function StickyCTA() {
       style={{ backgroundColor: "var(--bg)", borderTop: "1px solid var(--border)" }}
     >
       <Link
-        href="/contacto"
+        href="/que-dice-chatgpt-de-tu-marca"
         className="block w-full py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
         style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
       >
-        Solicitar diagnóstico gratuito
+        ¿Qué dice la IA de tu marca? Gratis
       </Link>
     </div>
   );

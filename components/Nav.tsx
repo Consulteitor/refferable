@@ -11,6 +11,8 @@ const links = [
   { href: "/contacto", label: "Contacto" },
 ];
 
+const CHECKER_HREF = "/que-dice-chatgpt-de-tu-marca";
+
 export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -41,11 +43,11 @@ export default function Nav() {
               </Link>
             ))}
             <Link
-              href="/contacto"
+              href={CHECKER_HREF}
               className="text-sm px-5 py-2 rounded font-medium transition-opacity hover:opacity-80"
               style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
             >
-              Diagnóstico gratuito
+              ¿Qué dice la IA de ti?
             </Link>
           </nav>
 
@@ -101,12 +103,12 @@ export default function Nav() {
                 </Link>
               ))}
               <Link
-                href="/contacto"
+                href={CHECKER_HREF}
                 className="mt-4 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
                 style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
                 onClick={() => setOpen(false)}
               >
-                Solicitar diagnóstico gratuito
+                ¿Qué dice la IA de tu marca?
               </Link>
             </nav>
           </div>

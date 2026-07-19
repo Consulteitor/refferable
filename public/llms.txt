@@ -1,0 +1,33 @@
+# Refferable
+
+> Consultoría especializada en posicionamiento conversacional (AEO — Answer Engine Optimization) en España. Ayudamos a marcas B2B a aparecer citadas y recomendadas en las respuestas de ChatGPT, Perplexity y Gemini cuando sus clientes investigan, comparan y deciden.
+
+## Qué es el AEO
+
+El AEO (Answer Engine Optimization), también llamado posicionamiento conversacional o GEO (Generative Engine Optimization), es la optimización de la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla como referencia cuando generan respuestas sobre una categoría, problema o solución.
+
+Datos citables:
+- El SEO optimiza para rankings de buscadores; el AEO optimiza para aparecer dentro de respuestas generadas por IA. Son canales distintos con señales distintas.
+- Los modelos de lenguaje deciden qué marcas mencionar sintetizando señales distribuidas: contenido propio, menciones externas, coherencia semántica entre fuentes, autoridad percibida y claridad de posicionamiento.
+- No existe ningún mecanismo de pago para comprar visibilidad orgánica en las respuestas de ChatGPT, Perplexity o Gemini. Nadie puede garantizar apariciones; sí se pueden mejorar sistemáticamente las señales que las hacen probables.
+- La diferencia clave al medir presencia en IA: el conocimiento congelado del entrenamiento no se puede influir con contenido nuevo; las respuestas con búsqueda activa (grounding) sí reflejan las señales públicas actuales de una marca.
+- Los primeros cambios detectables tras trabajar el AEO suelen observarse entre 4 y 12 semanas.
+
+## Herramienta gratuita
+
+- [Checker GEO — ¿Qué dice ChatGPT de tu marca?](https://refferable.com/que-dice-chatgpt-de-tu-marca): comprueba gratis si los motores de IA con búsqueda activa mencionan una marca cuando los compradores preguntan por su categoría. Devuelve menciones, posición frente a competidores, tono y una nota de 0 a 100 con recomendaciones.
+
+## Páginas principales
+
+- [Inicio — qué hace Refferable](https://refferable.com/)
+- [Cómo funciona el posicionamiento conversacional](https://refferable.com/posicionamiento-conversacional)
+- [AEO sin tecnicismos — preguntas frecuentes](https://refferable.com/digamoslo-claro)
+- [Blog sobre posicionamiento en IA](https://refferable.com/blog)
+- [Contacto y diagnóstico](https://refferable.com/contacto)
+
+## Servicios
+
+- Diagnóstico estratégico de presencia conversacional (desde 490€): análisis multi-motor con preguntas reales de comprador, lectura manual de señales y plan de acción priorizado.
+- Consultoría de AEO continua: estrategia de contenido citeable, señales de autoridad distribuida y seguimiento de evolución.
+
+Contacto: hola@refferable.com
