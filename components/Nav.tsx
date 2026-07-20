@@ -19,7 +19,17 @@ export default function Nav() {
 
   return (
     <>
-      <header style={{ backgroundColor: "var(--bg)", position: "relative", zIndex: 50 }}>
+      <header
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
+          backgroundColor: "rgba(247, 244, 238, 0.82)",
+          backdropFilter: "blur(14px) saturate(1.4)",
+          WebkitBackdropFilter: "blur(14px) saturate(1.4)",
+          borderBottom: "1px solid rgba(227, 223, 215, 0.7)",
+        }}
+      >
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link
             href="/"
@@ -42,11 +52,7 @@ export default function Nav() {
                 {label}
               </Link>
             ))}
-            <Link
-              href={CHECKER_HREF}
-              className="text-sm px-5 py-2 rounded font-medium transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
-            >
+            <Link href={CHECKER_HREF} className="btn-dark text-sm px-5 py-2 font-medium">
               ¿Qué dice la IA de ti?
             </Link>
           </nav>
@@ -104,8 +110,7 @@ export default function Nav() {
               ))}
               <Link
                 href={CHECKER_HREF}
-                className="mt-4 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
-                style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+                className="btn-dark mt-4 py-3 text-sm font-medium text-center"
                 onClick={() => setOpen(false)}
               >
                 ¿Qué dice la IA de tu marca?

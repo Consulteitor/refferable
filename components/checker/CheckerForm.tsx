@@ -11,17 +11,6 @@ import type { QueryResult, ScanInput } from "@/lib/geo/types";
 
 const initialState: CheckerState = { status: "idle" };
 
-const inputStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "0.75rem 1rem",
-  borderRadius: "0.25rem",
-  border: "1px solid var(--border)",
-  backgroundColor: "var(--bg)",
-  color: "var(--text)",
-  fontSize: "0.9rem",
-  fontFamily: "Inter, sans-serif",
-};
-
 const labelStyle: React.CSSProperties = {
   display: "block",
   fontSize: "0.75rem",
@@ -70,7 +59,7 @@ function ResultCard({ result }: { result: QueryResult }) {
   const snippet =
     result.answer.length > 260 ? `${result.answer.slice(0, 260)}…` : result.answer;
   return (
-    <li className="p-6 rounded" style={{ backgroundColor: "var(--surface)" }}>
+    <li className="p-6 rounded-lg" style={{ backgroundColor: "var(--surface)", border: "1px solid var(--border)" }}>
       <p
         className="font-medium mb-3"
         style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.05rem" }}
@@ -138,7 +127,7 @@ function ScoreBlock({ score, mentioned, total }: { score: number; mentioned: num
         style={{ backgroundColor: "var(--border)", maxWidth: "420px" }}
       >
         <div
-          className="h-2 rounded-full"
+          className="score-bar h-2 rounded-full"
           style={{ width: `${score}%`, backgroundColor: score >= 70 ? "#1a7a3a" : score >= 40 ? "#b8860b" : "#c0392b" }}
         />
       </div>
@@ -230,8 +219,7 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
           </p>
           <Link
             href="/contacto"
-            className="inline-block px-6 py-3 rounded text-sm font-medium transition-opacity hover:opacity-85"
-            style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}
+            className="btn-light inline-block px-6 py-3 text-sm font-medium"
           >
             Pedir el Diagnóstico estratégico
           </Link>
@@ -286,20 +274,15 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
                 required
                 autoComplete="email"
                 placeholder="tu@empresa.com"
-                style={inputStyle}
+                className="input-field"
               />
             </div>
             <ErrorMessage message={reportState.status === "error" ? reportState.message : undefined} />
             <button
               type="submit"
               disabled={reportPending}
-              className="px-6 py-3.5 rounded text-sm font-medium transition-opacity"
-              style={{
-                backgroundColor: "var(--cta-bg)",
-                color: "var(--cta-text)",
-                opacity: reportPending ? 0.6 : 1,
-                cursor: reportPending ? "not-allowed" : "pointer",
-              }}
+              className="btn-dark px-6 py-3.5 text-sm font-medium"
+              style={{ opacity: reportPending ? 0.6 : 1 }}
             >
               {reportPending ? "Analizando las preguntas restantes…" : "Desbloquear el informe completo gratis"}
             </button>
@@ -330,7 +313,7 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
             required
             maxLength={80}
             placeholder="Nombre de tu empresa o producto"
-            style={inputStyle}
+            className="input-field"
           />
         </div>
         <div>
@@ -343,7 +326,7 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
             type="url"
             maxLength={200}
             placeholder="https://tuempresa.com"
-            style={inputStyle}
+            className="input-field"
           />
         </div>
       </div>
@@ -360,7 +343,7 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
           maxLength={120}
           defaultValue={defaultCategory}
           placeholder="software de facturación, clínica dental en Valencia…"
-          style={inputStyle}
+          className="input-field"
         />
         <p className="text-xs mt-2" style={{ color: "var(--soft)" }}>
           Escríbela como la buscaría un cliente, no como la describes tú.
@@ -372,13 +355,13 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
           <label htmlFor="checker-comp1" style={labelStyle}>
             Competidor 1 (opcional)
           </label>
-          <input id="checker-comp1" name="competidor1" type="text" maxLength={80} style={inputStyle} />
+          <input id="checker-comp1" name="competidor1" type="text" maxLength={80} className="input-field" />
         </div>
         <div>
           <label htmlFor="checker-comp2" style={labelStyle}>
             Competidor 2 (opcional)
           </label>
-          <input id="checker-comp2" name="competidor2" type="text" maxLength={80} style={inputStyle} />
+          <input id="checker-comp2" name="competidor2" type="text" maxLength={80} className="input-field" />
         </div>
       </div>
 
@@ -387,13 +370,8 @@ export default function CheckerForm({ defaultCategory }: { defaultCategory?: str
       <button
         type="submit"
         disabled={scanPending}
-        className="w-full px-6 py-4 rounded text-sm font-medium transition-opacity"
-        style={{
-          backgroundColor: "var(--cta-bg)",
-          color: "var(--cta-text)",
-          opacity: scanPending ? 0.6 : 1,
-          cursor: scanPending ? "not-allowed" : "pointer",
-        }}
+        className="btn-dark w-full px-6 py-4 text-sm font-medium"
+        style={{ opacity: scanPending ? 0.6 : 1 }}
       >
         {scanPending ? "Preguntando a la IA en directo…" : "Comprobar gratis qué dice la IA"}
       </button>

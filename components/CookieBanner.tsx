@@ -77,8 +77,7 @@ export default function CookieBanner() {
             </button>
             <button
               onClick={accept}
-              className="text-xs px-4 py-2 rounded font-medium transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+              className="btn-dark text-xs px-4 py-2 font-medium"
             >
               Aceptar
             </button>

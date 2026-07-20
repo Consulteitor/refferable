@@ -88,7 +88,7 @@ export default async function SectorCheckerPage({
               {sector.stake}
             </p>
           </div>
-          <div className="p-8 rounded" style={{ backgroundColor: "var(--surface)" }}>
+          <div className="panel p-8">
             <h2 className="text-xs font-medium uppercase tracking-widest mb-6" style={{ color: "var(--soft)" }}>
               Compruébalo ahora
             </h2>
@@ -116,8 +116,7 @@ export default async function SectorCheckerPage({
                 <li key={s.slug}>
                   <Link
                     href={`/que-dice-chatgpt-de-tu-marca/${s.slug}`}
-                    className="inline-block text-sm px-4 py-2 rounded transition-opacity hover:opacity-70"
-                    style={{ border: "1px solid var(--border)", color: "var(--muted)" }}
+                    className="chip inline-block text-sm px-4 py-2"
                   >
                     {s.name}
                   </Link>
@@ -126,8 +125,7 @@ export default async function SectorCheckerPage({
             <li>
               <Link
                 href="/que-dice-chatgpt-de-tu-marca"
-                className="inline-block text-sm px-4 py-2 rounded transition-opacity hover:opacity-70"
-                style={{ border: "1px solid var(--border)", color: "var(--accent)" }}
+                className="chip chip-accent inline-block text-sm px-4 py-2"
               >
                 Checker general →
               </Link>

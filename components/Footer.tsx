@@ -13,17 +13,17 @@ export default function Footer() {
         <div className="flex gap-16">
           <div className="flex flex-col gap-3">
             <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>Servicios</p>
-            <Link href="/que-dice-chatgpt-de-tu-marca" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Checker gratuito</Link>
-            <Link href="/posicionamiento-conversacional" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Cómo funciona</Link>
-            <Link href="/digamoslo-claro" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Digámoslo claro</Link>
-            <Link href="/blog" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Blog</Link>
-            <Link href="/contacto" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Contacto</Link>
+            <Link href="/que-dice-chatgpt-de-tu-marca" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Checker gratuito</Link>
+            <Link href="/posicionamiento-conversacional" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Cómo funciona</Link>
+            <Link href="/digamoslo-claro" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Digámoslo claro</Link>
+            <Link href="/blog" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Blog</Link>
+            <Link href="/contacto" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Contacto</Link>
           </div>
           <div className="flex flex-col gap-3">
             <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>Legal</p>
-            <Link href="/aviso-legal" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Aviso Legal</Link>
-            <Link href="/privacidad" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Privacidad</Link>
-            <Link href="/cookies" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--muted)" }}>Cookies</Link>
+            <Link href="/aviso-legal" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Aviso Legal</Link>
+            <Link href="/privacidad" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Privacidad</Link>
+            <Link href="/cookies" className="link-underline text-sm" style={{ color: "var(--muted)" }}>Cookies</Link>
           </div>
         </div>
       </div>

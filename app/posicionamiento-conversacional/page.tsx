@@ -89,7 +89,7 @@ export default function PosicionamientoConversacional() {
               Qué es el posicionamiento conversacional y por qué ya afecta a tu negocio
             </h1>
             <p className="mb-5" style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1.1rem", lineHeight: "1.75" }}>
-              El <strong>AEO (Answer Engine Optimization)</strong> es la disciplina que optimiza la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla en sus respuestas.
+              El <strong>AEO (Answer Engine Optimization)</strong>{" "}es la disciplina que optimiza la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla en sus respuestas.
             </p>
             <p style={{ color: "var(--muted)", maxWidth: "620px", fontSize: "1rem", lineHeight: "1.75" }}>
               Cuando un comprador pregunta a ChatGPT, Perplexity o Gemini por proveedores, alternativas o soluciones, la IA no le entrega una lista de enlaces. Le da una interpretación del mercado. La pregunta no es si deberías estar ahí. Es si ya estás.
@@ -105,8 +105,7 @@ export default function PosicionamientoConversacional() {
             <div className="flex flex-col gap-3 pt-1">
               <Link
                 href="/contacto"
-                className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
-                style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+                className="btn-dark px-6 py-3 text-sm font-medium text-center"
               >
                 Solicitar diagnóstico gratuito
               </Link>
@@ -228,8 +227,7 @@ export default function PosicionamientoConversacional() {
           </p>
           <Link
             href="/contacto"
-            className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            className="btn-dark inline-block px-7 py-3 text-sm font-medium"
           >
             Solicitar diagnóstico gratuito
           </Link>

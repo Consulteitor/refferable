@@ -61,8 +61,7 @@ export default function Blog() {
           </p>
           <Link
             href="/contacto"
-            className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            className="btn-dark inline-block px-7 py-3 text-sm font-medium"
           >
             Solicitar diagnóstico gratuito
           </Link>

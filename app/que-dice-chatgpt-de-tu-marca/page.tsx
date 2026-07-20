@@ -128,7 +128,7 @@ export default function CheckerPage() {
               ))}
             </ul>
           </div>
-          <div className="p-8 rounded" style={{ backgroundColor: "var(--surface)" }}>
+          <div className="panel p-8">
             <h2 className="text-xs font-medium uppercase tracking-widest mb-6" style={{ color: "var(--soft)" }}>
               Compruébalo ahora
             </h2>
@@ -147,8 +147,8 @@ export default function CheckerPage() {
         </h2>
         <div className="grid md:grid-cols-3 gap-px" style={{ backgroundColor: "var(--border)" }}>
           {steps.map((s) => (
-            <div key={s.n} className="p-8" style={{ backgroundColor: "var(--bg)" }}>
-              <p aria-hidden="true" className="font-semibold mb-4 leading-none" style={{ fontFamily: "Lora, Georgia, serif", fontSize: "2.5rem", color: "var(--accent)", opacity: 0.3, lineHeight: 1 }}>
+            <div key={s.n} className="p-8 grid-cell">
+              <p aria-hidden="true" className="cell-number font-semibold mb-4">
                 {s.n}
               </p>
               <h3 className="font-semibold mb-3" style={{ fontSize: "1.05rem" }}>{s.title}</h3>
@@ -202,8 +202,7 @@ export default function CheckerPage() {
             <Link
               key={s.slug}
               href={`/que-dice-chatgpt-de-tu-marca/${s.slug}`}
-              className="p-8 block group"
-              style={{ backgroundColor: "var(--bg)" }}
+              className="p-8 block group grid-cell"
             >
               <h3 className="font-semibold mb-3 group-hover:opacity-70 transition-opacity" style={{ fontSize: "1.05rem" }}>
                 {s.name}
@@ -253,17 +252,15 @@ export default function CheckerPage() {
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
               href="/contacto"
-              className="px-7 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+              className="btn-dark px-7 py-3 text-sm font-medium text-center"
             >
               Pedir el Diagnóstico estratégico
             </Link>
             <Link
               href="/posicionamiento-conversacional"
-              className="px-7 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-60"
-              style={{ color: "var(--muted)" }}
+              className="link-quiet px-7 py-3 text-sm font-medium text-center"
             >
-              Entender el AEO →
+              Entender el AEO <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

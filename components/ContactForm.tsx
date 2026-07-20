@@ -10,13 +10,8 @@ function SubmitButton({ pending }: { pending: boolean }) {
     <button
       type="submit"
       disabled={pending}
-      className="w-full px-6 py-4 rounded text-sm font-medium transition-opacity"
-      style={{
-        backgroundColor: "var(--cta-bg)",
-        color: "var(--cta-text)",
-        opacity: pending ? 0.6 : 1,
-        cursor: pending ? "not-allowed" : "pointer",
-      }}
+      className="btn-dark w-full px-6 py-4 text-sm font-medium"
+      style={{ opacity: pending ? 0.6 : 1 }}
     >
       {pending ? "Enviando…" : "Solicitar diagnóstico gratuito"}
     </button>
@@ -32,18 +27,6 @@ export default function ContactForm() {
       formRef.current?.reset();
     }
   }, [state.status]);
-
-  const inputStyle = {
-    width: "100%",
-    padding: "0.75rem 1rem",
-    borderRadius: "0.25rem",
-    border: "1px solid var(--border)",
-    backgroundColor: "var(--bg)",
-    color: "var(--text)",
-    fontSize: "0.9rem",
-    fontFamily: "Inter, sans-serif",
-    outline: "none",
-  } as React.CSSProperties;
 
   const labelStyle = {
     display: "block",
@@ -85,7 +68,7 @@ export default function ContactForm() {
             required
             autoComplete="name"
             placeholder="Tu nombre"
-            style={inputStyle}
+            className="input-field"
           />
         </div>
         <div>
@@ -99,7 +82,7 @@ export default function ContactForm() {
             required
             autoComplete="organization"
             placeholder="Nombre de la empresa"
-            style={inputStyle}
+            className="input-field"
           />
         </div>
       </div>
@@ -115,7 +98,7 @@ export default function ContactForm() {
           required
           autoComplete="email"
           placeholder="tu@empresa.com"
-          style={inputStyle}
+          className="input-field"
         />
       </div>
 
@@ -128,7 +111,7 @@ export default function ContactForm() {
           name="categoria"
           type="text"
           placeholder="SaaS B2B, consultoría, ecommerce…"
-          style={inputStyle}
+          className="input-field"
         />
       </div>
 
@@ -142,7 +125,7 @@ export default function ContactForm() {
           required
           rows={5}
           placeholder="¿Contra quién compites? ¿Qué te preocupa? ¿Qué quieres saber?"
-          style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+          className="input-field" style={{ resize: "vertical", lineHeight: "1.6" }}
         />
       </div>
 

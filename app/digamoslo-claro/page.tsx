@@ -95,7 +95,7 @@ export default function DigamosloClaro() {
         <div className="max-w-3xl p-10 rounded" style={{ backgroundColor: "var(--surface)" }}>
           <p className="text-xs font-medium uppercase tracking-widest mb-4" style={{ color: "var(--soft)" }}>La definición operativa</p>
           <p style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.2rem", lineHeight: "1.7", color: "var(--text)" }}>
-            &quot;El <strong>AEO — Answer Engine Optimization</strong> consiste en optimizar la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, citarla y recomendarla cuando responden preguntas sobre una categoría, problema o solución.&quot;
+            &quot;El <strong>AEO — Answer Engine Optimization</strong>{" "}consiste en optimizar la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, citarla y recomendarla cuando responden preguntas sobre una categoría, problema o solución.&quot;
           </p>
         </div>
       </section>
@@ -126,8 +126,7 @@ export default function DigamosloClaro() {
           </p>
           <Link
             href="/contacto"
-            className="inline-block px-6 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            className="btn-dark inline-block px-6 py-3 text-sm font-medium"
           >
             Pedir diagnóstico gratuito
           </Link>
@@ -161,8 +160,7 @@ export default function DigamosloClaro() {
           </p>
           <Link
             href="/contacto"
-            className="inline-block px-7 py-3 rounded text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+            className="btn-dark inline-block px-7 py-3 text-sm font-medium"
           >
             Solicitar diagnóstico gratuito
           </Link>

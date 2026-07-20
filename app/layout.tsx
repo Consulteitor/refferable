@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 import CookieBanner from "@/components/CookieBanner";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: {
@@ -107,6 +108,7 @@ export default function RootLayout({
         <Footer />
         <StickyCTA />
         <CookieBanner />
+        <Reveal />
       </body>
     </html>
   );

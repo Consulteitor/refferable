@@ -191,17 +191,15 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link
                 href="/que-dice-chatgpt-de-tu-marca"
-                className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
-                style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+                className="btn-dark px-6 py-3 text-sm font-medium text-center"
               >
                 Comprueba gratis qué dice la IA de ti
               </Link>
               <Link
                 href="/posicionamiento-conversacional"
-                className="px-6 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-60"
-                style={{ color: "var(--muted)" }}
+                className="link-quiet px-6 py-3 text-sm font-medium text-center"
               >
-                Entender el AEO →
+                Entender el AEO <span className="arrow" aria-hidden="true">→</span>
               </Link>
             </div>
           </div>
@@ -264,7 +262,7 @@ export default function Home() {
           </div>
           <div>
             <p className="font-medium leading-relaxed mb-5" style={{ fontFamily: "Lora, Georgia, serif", fontStyle: "italic", fontSize: "1.2rem", color: "var(--text)", borderLeft: "2px solid var(--accent)", paddingLeft: "1.25rem" }}>
-              &quot;El <strong>AEO — Answer Engine Optimization</strong> es la optimización de la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla como referencia cuando generan respuestas.&quot;
+              &quot;El <strong>AEO — Answer Engine Optimization</strong>{" "}es la optimización de la presencia digital de una marca para que los modelos de lenguaje puedan entenderla, contextualizarla y citarla como referencia cuando generan respuestas.&quot;
             </p>
             <p className="mb-4" style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: "1.75" }}>
               El SEO tradicional optimiza para rankings. El AEO optimiza para ser parte de la respuesta. No se trata solo de poner más contenido en tu web. Se trata de construir un contexto digital claro, coherente y verificable alrededor de tu marca.
@@ -289,8 +287,8 @@ export default function Home() {
         </p>
         <div className="grid md:grid-cols-3 gap-px" style={{ backgroundColor: "var(--border)" }}>
           {problems.map((p) => (
-            <div key={p.n} className="p-8" style={{ backgroundColor: "var(--bg)" }}>
-              <p className="font-semibold mb-4 leading-none" style={{ fontFamily: "Lora, Georgia, serif", fontSize: "2.5rem", color: "var(--accent)", opacity: 0.3, lineHeight: 1 }}>
+            <div key={p.n} className="p-8 grid-cell">
+              <p className="cell-number font-semibold mb-4">
                 {p.n}
               </p>
               <h3 className="font-semibold mb-3" style={{ fontSize: "1.05rem" }}>{p.title}</h3>
@@ -311,8 +309,8 @@ export default function Home() {
         <h2 className="font-semibold leading-snug mb-10" style={{ fontSize: "1.75rem" }}>Qué hacemos</h2>
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: "var(--border)" }}>
           {services.map((s) => (
-            <div key={s.title} className="p-8" style={{ backgroundColor: "var(--bg)" }}>
-              <p className="font-semibold mb-3 leading-none" style={{ fontFamily: "Lora, Georgia, serif", fontSize: "2.5rem", color: "var(--accent)", opacity: 0.3, lineHeight: 1 }}>
+            <div key={s.title} className="p-8 grid-cell">
+              <p className="cell-number font-semibold mb-3">
                 {s.n}
               </p>
               <h3 className="font-semibold mb-3" style={{ fontSize: "1.1rem" }}>{s.title}</h3>
@@ -354,7 +352,7 @@ export default function Home() {
         </p>
         <div className="grid md:grid-cols-3 gap-px" style={{ backgroundColor: "var(--border)" }}>
           {targetProfiles.map((p) => (
-            <div key={p.title} className="p-8" style={{ backgroundColor: "var(--bg)" }}>
+            <div key={p.title} className="p-8 grid-cell">
               <h3 className="font-semibold mb-3" style={{ fontSize: "1.05rem" }}>{p.title}</h3>
               <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.75" }}>{p.desc}</p>
             </div>
@@ -398,17 +396,15 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
               href="/que-dice-chatgpt-de-tu-marca"
-              className="inline-block px-7 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-text)" }}
+              className="btn-dark inline-block px-7 py-3 text-sm font-medium text-center"
             >
               Comprobarlo gratis ahora
             </Link>
             <Link
               href="/contacto"
-              className="inline-block px-7 py-3 rounded text-sm font-medium text-center transition-opacity hover:opacity-60"
-              style={{ color: "var(--muted)" }}
+              className="link-quiet inline-block px-7 py-3 text-sm font-medium text-center"
             >
-              Hablar con nosotros →
+              Hablar con nosotros <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
